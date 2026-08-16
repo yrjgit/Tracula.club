@@ -1,0 +1,739 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+background:#111;
+color:white;
+
+}
+
+/* NAVBAR */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(12px);
+
+z-index:999;
+
+}
+
+/*.logo{
+
+font-size:34px;
+
+font-family:'Bebas Neue';
+
+letter-spacing:2px;
+
+color:#fff;
+
+}*/
+.logo{
+
+font-family:'Bebas Neue';
+
+font-size:35px;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+color:#ffffff;
+
+display:flex;
+
+align-items:center;
+
+cursor:pointer;
+
+}
+.logo2{
+
+font-family:'Bebas Neue';
+
+font-size:35px;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+color:#cb3131;
+
+display:flex;
+
+align-items:center;
+
+cursor:pointer;
+
+
+}
+.logo-container {
+    display: flex;
+    gap: 8px;
+}
+
+
+/* individual letters */
+
+.logo span{
+
+display:inline-block;
+
+color:#ffffff;
+
+transition:
+
+color .05s ease,
+
+text-shadow .05s ease,
+
+transform .005s ease;
+
+}
+
+.logo2 span{
+
+display:inline-block;
+
+color:#cb3131;
+
+transition:
+
+color .05s ease,
+
+text-shadow .05s ease,
+
+transform .005s ease;
+
+}
+
+
+/* only the letter under cursor lights up */
+
+.logo span:hover{
+
+color:#cb3131;
+
+text-shadow:
+
+0 0 8px #170404,
+
+0 0 8px #1b0606,
+
+0 0 8px #1e0606;
+
+transform:
+
+translateY(0px);
+
+}
+
+.logo2 span:hover{
+
+color:#ffffff;
+
+text-shadow:
+
+0 0 8px #000000,
+
+0 0 8px #000000,
+
+0 0 8px #000000;
+
+transform:
+
+translateY(0px);
+
+}
+
+/*.club{
+font-size:30px;
+
+font-family:'Bebas Neue';
+
+letter-spacing:2px;
+
+color:#ad2c2c;
+
+}*/
+
+nav{
+
+display:flex;
+
+gap:35px;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#66020c;
+
+}
+
+.book-btn{
+
+background:#c62828;
+
+padding:12px 22px;
+
+border-radius:6px;
+
+color:white;
+
+text-decoration:none;
+
+}
+
+.book-btn:hover{
+
+background:#e53935;
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+background:url("image/hero.png") center/cover; 
+
+display:flex;
+
+align-items:center;
+
+padding:8%;
+
+position:relative;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.55);
+
+}
+
+.hero-content{
+
+position:relative;
+
+max-width:650px;
+
+}
+
+.hero h1{
+
+font-size:90px;
+
+font-family:'Bebas Neue';
+
+line-height:0.9;
+
+letter-spacing:3px;
+
+}
+
+.hero span{
+
+display:block;
+
+color:#d72638;
+
+margin-top:20px;
+
+}
+
+.hero p{
+
+margin-top:30px;
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+.buttons{
+
+margin-top:40px;
+
+display:flex;
+
+gap:20px;
+
+}
+
+button{
+
+padding:15px 30px;
+
+border:none;
+
+background:#c62828;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+border-radius:6px;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+}
+
+.outline{
+
+background:transparent;
+
+border:2px solid white;
+
+}
+
+/* SECTIONS */
+
+section{
+
+padding:100px 8%;
+
+}
+
+section h2{
+
+font-family:'Bebas Neue';
+
+font-size:60px;
+
+margin-bottom:40px;
+
+letter-spacing:2px;
+
+}
+
+/* DESTINATIONS */
+
+.cards{
+
+display:flex;
+
+overflow-x:auto;
+
+gap:25px;
+
+padding-bottom:20px;
+
+scroll-snap-type:x mandatory;
+
+}
+
+.cards::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+.cards::-webkit-scrollbar-thumb{
+
+background:#444;
+
+border-radius:20px;
+
+}
+
+.card{
+
+min-width:330px;
+
+max-width:330px;
+
+background:#1d1d1d;
+
+border-radius:20px;
+
+overflow:hidden;
+
+scroll-snap-align:start;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:330px;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.card-info{
+
+padding:20px;
+
+}
+
+.card-info h3{
+
+font-size:28px;
+
+font-family:'Bebas Neue',serif;
+
+letter-spacing:1px;
+
+color:#f1eded;
+font-style: normal;
+
+}
+
+.card-info p{
+
+margin-top:8px;
+
+color:#aaa;
+
+}
+.cards a{
+
+text-decoration: none;
+}
+
+/* EXPERIENCES */
+
+.experience-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-rows:repeat(auto-fit,minmax(120px,1fr));
+gap:30px;
+
+}
+
+.experiences{
+height:100vh;
+
+/*background:url("https://png.pngtree.com/background/20230522/original/pngtree-black-and-white-wallpaper-of-many-bats-flying-by-picture-image_2690351.jpg") center/cover;*/
+ 
+display:grid;
+
+background-color: #1a1717;
+
+align-items:center;
+
+padding:8%;
+
+position:relative;
+}
+.box{
+
+background:#bc3a3a;
+
+padding:50px 30px;
+
+text-align:center;
+
+font-size:38px;
+font-family:'Bebas Neue';
+
+border-radius:10px;
+
+transition:.4s;
+
+}
+
+.box:hover{
+
+background:#101010;
+
+transform:translateY(-6px);
+
+.button.scroll-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+    cursor:pointer;
+    font-size:22px;
+    z-index:10;
+}
+.left{
+    left:0;
+}
+.right{
+    right:0;
+}
+.scroll-btn:hover{
+    background:#0d6efd;
+    color:#fff;
+}
+
+}
+.About {
+    
+ height:70vh;
+ background-color: #131313;
+   
+}
+
+/* ABOUT */
+
+#about p{
+
+max-width:700px;
+
+height:50vh;
+
+line-height:2;
+
+color:#ccc;
+
+}
+
+/* CONTACT */
+
+#contact p{
+
+margin-bottom:15px;
+
+
+color:#ccc;
+
+}
+
+/* FOOTER */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+background:black;
+
+color:#777;
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+header{
+
+padding:20px;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+.hero{
+
+text-align:center;
+
+justify-content:center;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+}
+
+/*=========================
+        BATS
+=========================*/
+/*=========================
+        BAT FLOCK
+=========================*/
+
+#bat-container{
+
+position:fixed;
+inset:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+overflow:hidden;
+
+z-index:99999;
+
+}
+
+.bat{
+
+position:absolute;
+
+opacity:0;
+
+animation-name:fly;
+
+animation-timing-function:linear;
+animation-fill-mode:forwards;
+
+will-change:transform;
+
+}
+
+.bat img{
+
+width:100%;
+height:auto;
+
+animation:flap .25s infinite alternate;
+
+filter:
+drop-shadow(0 0 8px rgba(0,0,0,.7));
+
+}
+.destination-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.carousel{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+.card-content h3{
+    color:#0B1F33;
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+}
+
+
+@keyframes flap{
+
+from{
+
+transform:rotate(-12deg);
+
+}
+
+to{
+
+transform:rotate(12deg);
+
+}
+
+}
+
+@keyframes fly{
+
+0%{
+
+opacity:0;
+
+}
+
+5%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+}
+
+}
